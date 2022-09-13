@@ -6,7 +6,7 @@ const links = [
   ]
 
   function loadIndex () {
-    const ol = document.querySelector("#linksList")
+    const ol = document.querySelector("#classLinks")
 
     links.forEach (link => {
         const li = document.createElement("li");
