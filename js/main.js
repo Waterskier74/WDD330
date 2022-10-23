@@ -2,10 +2,6 @@ const links = [
     {
       label: "Week1 notes",
       url: "week1/index.html",
-      label: "week2 notes",
-      url: "week2/Larrabee_Week2_notes.htm",
-      label: "week3 notes",
-      url: "week3/Larrabee_week3_notes.htm",
       label: "week6 Todo App",
       url: "week6/index.html"
     }
