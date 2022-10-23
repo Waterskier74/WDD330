@@ -23,13 +23,13 @@ function populateTodoList () {
     pendingBtn.style.textDecoration = "none";
     completeBtn.style.textDecoration = "none";
     let getLocalStorageTodo = localStorage.getItem("toDoList");
-    let todoArray = ""
+    let todoArray="";
     if(getLocalStorageTodo == null){
         todoArray = [];
     }else{
         todoArray = JSON.parse(getLocalStorageTodo);
     }
-    let todoItem ="";
+    let todoItem="";
     todoArray.forEach((todo, index) =>{
         todoItem += `<li id="${todo.id}" index="${index}" completed="${todo.completed}" class="${todo.class}">${todo.content}</li><button class="removeTodo">X</button>`;
     })
