@@ -2,13 +2,18 @@ import MainMenu from './mainMenu.js'
 const requestURL = 'https://Waterskier74.github.io/wdd330/finalProject/data/teamRoster.json'
 let teamRoster = [ ];
 
+let data = localStorage.getItem("teamRoster")
+if (data === null) {
+    fetch (requestURL)
+        .then(res => res.json())
+        .then (data => {
+            teamRoster= data
+            console.log (teamRoster);
+    })
+}else{
+    JSON.parse(teamRoster)
+}
 
-fetch (requestURL)
-    .then(res => res.json())
-    .then (data => {
-       teamRoster= data
-       console.log (teamRoster);
-    });
 
 function showTeamRoster(listId) {
     const menuItems = document.getElementById(listId);
@@ -183,14 +188,7 @@ export default class Players {
         let confirmEdit = confirm("Do you want edit this player?")
         if (confirmEdit) {
             teamRoster.splice(playerIndex, 1, data);
-            writeFile('./data/teamRoster.json', JSON.stringify(teamRoster, null, 2), err =>{
-                if (err) {
-                    console.log(err);
-                }else{
-                    console.log('File successfully written')
-                }
-            })
-            
+            localStorage.setItem("teamRoster", JSON.stringify(teamRoster));
             alert("Edit has been completed.")
         } else {
             alert("Edit has been cancelled.")
