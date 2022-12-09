@@ -1,9 +1,9 @@
 import MainMenu from './mainMenu.js'
-const requestURL = 'https://ricklarrabee.github.io/wdd330'
+const requestURL = 'https://Waterskier74.github.io/wdd330/finalProject/data.teamRoster.json'
 let teamRoster = [ ];
 
 
-fetch ('./data/teamRoster.json')
+fetch (requestURL)
     .then(res => res.json())
     .then (data => {
        teamRoster= data
