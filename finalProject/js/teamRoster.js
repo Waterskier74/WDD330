@@ -1,5 +1,5 @@
 import MainMenu from './mainMenu.js'
-const requestURL = 'https://Waterskier74.github.io/wdd330/finalProject/data.teamRoster.json'
+const requestURL = 'https://Waterskier74.github.io/wdd330/finalProject/data/teamRoster.json'
 let teamRoster = [ ];
 
 
