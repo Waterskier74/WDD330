@@ -29,7 +29,8 @@ export default class MainMenu {
         const tournamentRosterBtn = document.createElement("button")
         tournamentRosterBtn.textContent = "Tournament Roster"
         tournamentRosterBtn.addEventListener('click', () => {});
-
+            let menu = new Tournaments('menu');
+            menu.showTournamentRoster();
         tournamentRosterBtn.addEventListener('touchend', (ev) => {
             ev.preventDefault();
         })
