@@ -84,7 +84,7 @@ export default class Tournaments {
  //               this.showTournamentStats(item);
             })
         })
-        menu.appendChild(this.createAddPlayerButton());
+//       menu.appendChild(this.createAddPlayerButton());
         menu.appendChild(this.createBackButton());
     }
 }

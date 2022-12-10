@@ -1,6 +1,4 @@
-import Tournaments from './tournamentRoster.js';
 import Players from './teamRoster.js';
-
 
 // Render the Main Menu for the application
 function showMainMenu () {
@@ -15,13 +13,13 @@ export default class MainMenu {
         const teamRosterBtn = document.createElement("button")
         teamRosterBtn.textContent ="Team Roster"
         teamRosterBtn.addEventListener('click', () => {
-            let menu = new Players('menu')
-            menu.showTeamRoster()
+            let teamMenu = new Players('menu');
+            teamMenu.showTeamRoster();
         });
         teamRosterBtn.addEventListener('touchend', (ev) => {
             ev.preventDefault();
-            let menu = new Players('menu');
-            menu.showTeamRoster();
+            let teamMenu = new Players('menu');
+            teamMenu.showTeamRoster();
         });
         return teamRosterBtn;
     }
@@ -30,12 +28,9 @@ export default class MainMenu {
         const tournamentRosterBtn = document.createElement("button")
         tournamentRosterBtn.textContent = "Tournament Roster"
         tournamentRosterBtn.addEventListener('click', () => {});
-            let menu = new Tournaments('menu');
-            menu.showTournamentRoster();
+
         tournamentRosterBtn.addEventListener('touchend', (ev) => {
             ev.preventDefault();
-            let menu = new Tournaments('menu');
-            menu.showTournamentRoster();
         })
         return tournamentRosterBtn;
     }
