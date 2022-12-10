@@ -1,4 +1,5 @@
 import Players from './teamRoster.js';
+import Tournaments from './tournament.js';
 
 // Render the Main Menu for the application
 function showMainMenu () {
