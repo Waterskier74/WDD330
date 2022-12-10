@@ -2,18 +2,26 @@ import MainMenu from './mainMenu.js'
 const requestURL = 'https://Waterskier74.github.io/wdd330/finalProject/data/teamRoster.json'
 let teamRoster = [ ];
 
-let data = localStorage.getItem("teamRoster")
+let data = JSON.parse(localStorage.getItem("teamRoster"))
 if (data === null) {
-    fetch (requestURL)
-        .then(res => res.json())
-        .then (data => {
-            teamRoster= data
-            console.log (teamRoster);
-    })
+    teamRoster = fetchBlankTeamRoster();
 }else{
-    JSON.parse(teamRoster)
+    teamRoster = data;
 }
 
+function fetchBlankTeamRoster () {
+    let blankTeamRoster = []
+    fetch (requestURL)
+    .then(res => res.json())
+    .then (data => {
+        blankTeamRoster = data
+    })
+    .catch(error => {
+        console.error('Something went wrong.');
+        console.error(error);
+    })
+    return blankTeamRoster;
+}
 
 function showTeamRoster(listId) {
     const menuItems = document.getElementById(listId);
@@ -37,6 +45,90 @@ function renderOnePlayer(player) {
             </div>`;
 
     return item;
+}
+
+function renderBlankPlayer() {
+    document.getElementById('menu').innerHTML = `
+    <li>
+        <h2>player Name</h2>
+        <input id="name" value="Enter Player Name">
+        <div>
+            <h3>Player Number</h3>
+            <input type=number" id="number" value=0>
+        </div>
+        <div>
+            <h3>Games Played</h3>
+            <input type="number" id="gamesPlayed" value=0>
+        </div>
+        <div>
+            <h3>Service Attempts</h3>
+            <input type="number" id="serviceAttempts" value=0>
+        </div>
+        <div>
+            <h3>Aces</h3>
+            <input type="number" id="aces" value=0>
+        </div>
+        <div>
+            <h3>Service Errors</h3>
+            <input type="number" id="serviceErrors" value=0>
+        </div>
+        <div>
+            <h3>Points</h3>
+            <input type="number" id="points" value=0>
+        </div>
+        <div>
+            <h3>Attempts</h3>
+            <input type="number" id="attempts" value=0>
+        </div>
+        <div>
+            <h3>Kills</h3>
+            <input type="number" id="kills" value=0>
+        </div>
+        <div>
+            <h3>Errors</h3>
+            <input type="number" id="errors" value=0>
+        </div>
+        <div>
+            <h3>Service Receptions</h3>
+            <input type="number" id="serviceReceptions" value=0>
+        </div>
+        <div>
+            <h3>Service Reception Errors</h3>
+            <input type="number" id="serviceReceptionErrors" value=0>
+        </div>
+        <div>
+            <h3>Block Solo</h3>
+            <input type="number" id="blockSolo" value=0>
+        </div>
+        <div>
+            <h3>Block Assists</h3>
+            <input type="number" id="blockAssist" value=0>
+        </div>
+        <div>
+            <h3>Block Errors</h3>
+            <input type="number" id="blockErrors" value=0>
+        </div>
+        <div>
+            <h3>Ball Handling Attempts</h3>
+            <input type="number" id="ballHandlingAttempts" value=0>
+        </div>
+        <div>
+            <h3>Assists</h3>
+            <input type="number" id="assists" value=0>
+        </div>
+        <div>
+            <h3>Ball Handing Errors</h3>
+            <input type="number" id="ballHandlingErrors" value=0>
+        </div>
+        <div>
+            <h3>Digs</h3>
+            <input type="number" id="digs" value=0>
+        </div>
+        <div>
+            <h3>Dig Errors</h3>
+            <input type="number" id="digErrors" value=0>
+        </div>
+    `
 }
 
 function renderPlayerStats(player, listId) {
@@ -141,24 +233,126 @@ export default class Players {
     createBackButton() {
         const backBtn = document.createElement("button");
         backBtn.textContent = "< back to Main Menu";
-        backBtn.addEventListener('touchend', () => {
+        backBtn.addEventListener('click', () => {
             let menu = new MainMenu('menu')
             menu.showMenu(); });
+        backBtn.addEventListener('touchend', (ev) => {
+            ev.preventDefault();
+            let menu = new MainMenu('menu')
+            menu.showMenu();
+        });
         return backBtn;
     }
 
     createCloseButton() {
         const closeBtn = document.createElement("button");
         closeBtn.textContent = "Return to Team Roster";
-        closeBtn.addEventListener('touchend', () => {this.showTeamRoster(); });
+        closeBtn.addEventListener('click', () => {
+            this.showTeamRoster(); });
+        closeBtn.addEventListener('touchend', (ev) => {
+            ev.preventDefault();
+            this.showTeamRoster();
+        });
         return closeBtn;
     }
 
-    createEditPlayerButton() {
+    createEditPlayerButton(playerIndex) {
         const editStatsBtn = document.createElement("button");
         editStatsBtn.textContent = "Edit Player";
-        editStatsBtn.addEventListener('touchend', () => {this.editPlayerStats(); });
+        editStatsBtn.addEventListener('click', () => {
+            this.editPlayerStats(playerIndex); });
+        editStatsBtn.addEventListener('touchend', (ev) => {
+            ev.preventDefault();
+            this.editPlayerStats(playerIndex);
+        })
         return editStatsBtn;
+    }
+
+    createAddPlayerButton() {
+        const addPlayerBtn = document.createElement("button");
+        addPlayerBtn.textContent = "Add Player"
+        addPlayerBtn.addEventListener('click', () => {
+            this.showNewPlayer();
+        });
+        addPlayerBtn.addEventListener('touchend', (ev) => {
+            ev.preventDefault();
+            this.showNewPlayer();
+        });
+        return addPlayerBtn;
+    }
+
+    createSavePlayerButton () {
+        const savePlayerBtn = document.createElement("button");
+        savePlayerBtn.textContent = "Save Player"
+        savePlayerBtn.addEventListener ('click', () => {
+            this.addPlayer();
+        });
+        savePlayerBtn.addEventListener('touchend', (ev) => {
+            ev.preventDefault();
+            this.addPlayer();
+        })
+        return savePlayerBtn;
+    }
+
+    createDeletePlayerButton (playerIndex) {
+        const deletePlayerBtn = document.createElement("button");
+        deletePlayerBtn.textContent = "Delete Player"
+        deletePlayerBtn.addEventListener('click', () =>{
+            this.deletePlayer(playerIndex);
+        });
+        deletePlayerBtn.addEventListener('touchend', (ev) =>{
+            ev.preventDefault();
+            this.deletePlayer(playerIndex);
+        })
+        return deletePlayerBtn;
+    }
+
+    addPlayer() {
+        const newData = {
+            name: document.getElementById('name').value,
+            number: parseInt(document.getElementById('number').value),
+            gamesPlayed: parseInt(document.getElementById('gamesPlayed').value),
+            serviceAttempts: parseInt(document.getElementById('serviceAttempts').value),
+            aces: parseInt(document.getElementById("aces").value),
+            serviceErrors: parseInt(document.getElementById("serviceErrors").value),
+            points: parseInt(document.getElementById("points").value),
+            attempts: parseInt(document.getElementById("attempts").value),
+            kills: parseInt(document.getElementById("kills").value),
+            errors: parseInt(document.getElementById("errors").value),
+            serviceReceptions: parseInt(document.getElementById("serviceReceptions").value),
+            serviceReceptionErrors: parseInt(document.getElementById("serviceReceptionErrors").value),
+            blockSolo: parseInt(document.getElementById("blockSolo").value),
+            blockAssist: parseInt(document.getElementById("blockAssist").value),
+            blockErrors: parseInt(document.getElementById("blockErrors").value),
+            ballHandlingAttempts: parseInt(document.getElementById("ballHandlingAttempts").value),
+            assists: parseInt(document.getElementById("assists").value),
+            ballHandlingErrors: parseInt(document.getElementById("ballHandlingErrors").value),
+            digs: parseInt(document.getElementById("digs").value),
+            digErrors: parseInt(document.getElementById("digErrors").value)
+        }
+        let confirmAdd = confirm("Do you want add this player?")
+        if (confirmAdd) {
+            teamRoster.push(newData);
+            localStorage.setItem("teamRoster", JSON.stringify(teamRoster));
+            alert("Player has been added.")
+            this.showTeamRoster();
+        } else {
+            alert("Edit has been cancelled.")
+        }
+    }
+
+    deletePlayer(index) {
+        const playerIndex = index
+        let confirmDelete = confirm("Are you sure you want to delete this player?")
+        if (confirmDelete) {
+            teamRoster.splice(playerIndex, 1);
+            localStorage.setItem("teamRoster", JSON.stringify(teamRoster));
+            this.showTeamRoster();
+            alert("Player has been deleted.");
+        }else{
+            alert("Delete has been cancelled.");
+        }
+
     }
 
     editPlayerStats(index) {
@@ -189,9 +383,9 @@ export default class Players {
         if (confirmEdit) {
             teamRoster.splice(playerIndex, 1, data);
             localStorage.setItem("teamRoster", JSON.stringify(teamRoster));
-            alert("Edit has been completed.")
+            alert("Edit has been completed.");
         } else {
-            alert("Edit has been cancelled.")
+            alert("Edit has been cancelled.");
         }
     }
 
@@ -199,23 +393,35 @@ export default class Players {
         let playerName = item.querySelector('h2').innerText;
         let player = this.getPlayerByName(playerName);
         let playerIndex = this.getAllPlayers().indexOf(player);
-        console.log(playerIndex);
         if (player !== null) {
             const list = document.getElementById(this._listId)
             list.innerHTML = "";
             renderPlayerStats(player, this._listId);
             list.appendChild(this.createEditPlayerButton(playerIndex));
+            list.appendChild(this.createDeletePlayerButton(playerIndex));
             list.appendChild(this.createCloseButton());
         }
     }
 
     showTeamRoster() {
         showTeamRoster(this._listId);
-        const menu = document.getElementById("menu")
+        const menu = document.getElementById("menu");
         const listItems = Array.from(document.getElementById(this._listId).querySelectorAll('li'));
         listItems.forEach(item => {
-            item.addEventListener('touchend', () => { this.showPlayerStats(item) })
+            item.addEventListener('click', () => { this.showPlayerStats(item) })
+            item.addEventListener('touchend', (ev) => {
+                ev.preventDefault();
+                this.showPlayerStats(item);
+            })
         })
+        menu.appendChild(this.createAddPlayerButton());
+        menu.appendChild(this.createBackButton());
+    }
+
+    showNewPlayer() {
+        const menu = document.getElementById("menu");
+        renderBlankPlayer();
+        menu.appendChild(this.createSavePlayerButton());
         menu.appendChild(this.createBackButton());
     }
 }
