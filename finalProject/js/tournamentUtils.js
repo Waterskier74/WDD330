@@ -42,7 +42,7 @@ export function renderOneTournament(tournament) {
     const item = document.createElement("li");
     item.innerHTML = `<h2>${tournament.tournamentName}</h2>
             <div>
-                <h3>Tournament Location/h3>
+                <h3>Tournament Location</h3>
                 <p>${tournament.location}</p>
             </div>`;
 
@@ -55,19 +55,36 @@ export function renderBlankTournament () {
         <h2>Tournament Name</h2>
         <input id="tournamentName" value="Enter Tournament Name">
         <div>
-            <h3>Tournament Location</h3>
+            <h3> Tournament Location </h3>
             <input id="location" value="Enter Tournament Location">
         </div>
     `
 }
 
+export function editTournamentStats(index) {
+    const tournamentIndex = index;
+    const data = {
+        tournamentName: document.getElementById('tournamentName').value,
+        location: document.getElementById('location').value,
+    }
+    let confirmEdit = confirm("Do you want edit this player?")
+    if (confirmEdit) {
+        tournamentRoster = returnTournamentRoster();
+        tournamentRoster.splice(tournamentIndex, 1, data);
+        localStorage.setItem("tournamentRoster", JSON.stringify(tournamentRoster));
+        alert("Edit has been completed.");
+    } else {
+        alert("Edit has been cancelled.");
+    }
+}
+
 export function renderTournamentStats(tournament, tournamentId) {
     document.getElementById(tournamentId).innerHTML = `
     <li>
-        <h2>player Name</h2>
+        <h2>Tournament Name</h2>
         <input id="tournamentName" value=${tournament.tournamentName}>
         <div>
-            <h3>Player Number</h3>
+            <h3>Tournament Location</h3>
             <input id="location" value="${tournament.location}">
         </div>
     `
@@ -87,5 +104,18 @@ export function addTournament() {
         alert("Tournament has been added.")
     } else {
         alert("Save has been cancelled.")
+    };
+}
+
+export function deleteTournament(index) {
+    const tournamentIndex = index
+    let confirmDelete = confirm("Are you sure you want to delete this tournament?")
+    if (confirmDelete) {
+        tournamentRoster = returnTournamentRoster();
+        tournamentRoster.splice(tournamentIndex, 1);
+        localStorage.setItem("tournamentRoster", JSON.stringify(tournamentRoster));
+        alert("Tournament has been deleted.");
+    }else{
+        alert("Delete has been cancelled.");
     }
 }

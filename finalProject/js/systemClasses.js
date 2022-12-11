@@ -171,7 +171,7 @@ export class Players {
         const menu = document.getElementById("menu");
         teamUtils.renderBlankPlayer();
         menu.appendChild(this.createSavePlayerButton());
-        menu.appendChild(this.createBackButton());
+        menu.appendChild(this.createCloseButton());
     }
 }
 
@@ -185,7 +185,7 @@ export class Tournaments {
     }
 
     getTournamentByName(tournamentName) {
-        return this.getAllTournaments().find(tournament => tournament.name === tournamentName);
+        return this.getAllTournaments().find(tournament => tournament.tournamentName === tournamentName);
     }
 
     createCloseButton() {
@@ -242,6 +242,33 @@ export class Tournaments {
         return saveTournamentBtn;
     }
 
+    createDeleteTournamentButton (tournamentIndex) {
+        const deleteTournamentBtn = document.createElement("button");
+        deleteTournamentBtn.textContent = "Delete Tournament"
+        deleteTournamentBtn.addEventListener('click', () =>{
+            tournamentUtils.deleteTournament(tournamentIndex);
+            this.showTournamentRoster()
+        });
+        deleteTournamentBtn.addEventListener('touchend', (ev) =>{
+            ev.preventDefault();
+            tournamentUtils.deleteTournament(tournamentIndex);
+            this.showTournamentRoster();
+        })
+        return deleteTournamentBtn;
+    }
+
+    createEditTournamentButton(playerIndex) {
+        const editTournamentBtn = document.createElement("button");
+        editTournamentBtn.textContent = "Edit Tournament";
+        editTournamentBtn.addEventListener('click', () => {
+            tournamentUtils.editTournamentStats(playerIndex); });
+        editTournamentBtn.addEventListener('touchend', (ev) => {
+            ev.preventDefault();
+            tournamentUtils.editTournamentStats(playerIndex);
+        })
+        return editTournamentBtn;
+    }
+
     showTournamentStats (item) {
         let tournamentName = item.querySelector('h2').innerText;
         let tournament = this.getTournamentByName(tournamentName);
@@ -249,7 +276,7 @@ export class Tournaments {
         if (tournament !== null) {
             const list = document.getElementById(this._tournamentId)
             list.innerHTML = "";
-            teamUtils.renderPlayerStats(tournament, this._tournamentId);
+            tournamentUtils.renderTournamentStats(tournament, this._tournamentId);
             list.appendChild(this.createEditTournamentButton(tournamentIndex));
             list.appendChild(this.createDeleteTournamentButton(tournamentIndex));
             list.appendChild(this.createCloseButton());
@@ -277,7 +304,7 @@ export class Tournaments {
         const menu = document.getElementById("menu");
         tournamentUtils.renderBlankTournament();
         menu.appendChild(this.createSaveTournamentButton());
-        menu.appendChild(this.createTournamentBackButton());
+        menu.appendChild(this.createCloseButton());
     }
 
     
