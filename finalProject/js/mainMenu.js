@@ -1,26 +1,26 @@
-import Players from './teamRoster.js';
-import Tournaments from './tournament.js';
+import {Players, Tournaments} from './systemClasses.js';
+//import { Tournaments } from './tournamentClass.js';
+
+//import Tournaments from './tournament.js';
 
 // Render the Main Menu for the application
 function showMainMenu () {
     const menuElements = document.getElementById("menu");
-    menuElements.innerText = "";
+    menuElements.innerHTML = "";
 }
-
-
 
 export default class MainMenu {
     createTeamRosterButton() {
         const teamRosterBtn = document.createElement("button")
         teamRosterBtn.textContent ="Team Roster"
         teamRosterBtn.addEventListener('click', () => {
-            let teamMenu = new Players('menu');
-            teamMenu.showTeamRoster();
+            let menu = new Players('menu');
+            menu.showTeamRoster();
         });
         teamRosterBtn.addEventListener('touchend', (ev) => {
             ev.preventDefault();
-            let teamMenu = new Players('menu');
-            teamMenu.showTeamRoster();
+            let menu = new Players('menu');
+            menu.showTeamRoster();
         });
         return teamRosterBtn;
     }
@@ -28,11 +28,14 @@ export default class MainMenu {
     createTournamentButton() {
         const tournamentRosterBtn = document.createElement("button")
         tournamentRosterBtn.textContent = "Tournament Roster"
-        tournamentRosterBtn.addEventListener('click', () => {});
+        tournamentRosterBtn.addEventListener('click', () => {;
             let menu = new Tournaments('menu');
             menu.showTournamentRoster();
+        })
         tournamentRosterBtn.addEventListener('touchend', (ev) => {
             ev.preventDefault();
+            let menu = new Tournaments('menu');
+            menu.showTournamentRoster();
         })
         return tournamentRosterBtn;
     }
@@ -41,5 +44,7 @@ export default class MainMenu {
         showMainMenu();
         menu.appendChild(this.createTeamRosterButton())
         menu.appendChild(this.createTournamentButton())
+
+
     }
 }
