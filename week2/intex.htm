@@ -1,0 +1,811 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Programming
+basics</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Use comments - This will help you and other when working on the
+     code later and especially when troubleshooting code.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Use a ; at the end of most statements.  Blocks {} do not need a ;</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Reserved words in Java script - <span style='background:yellow'>abstract,
+     await, boolean, break, byte, case, catch, char, class, const, continue,
+     debugger, default, delete, do, double, else, enum, export, extends, false,
+     final, finally, float, for, function, goto, if, implements, import, in
+     instanceof, int, interface, let, long, native, new, null, package,
+     private, protected, public, return, short, static, super, switch,
+     synchronized, this, throw, throws, transient, true, try, typeof, var,
+     volatile, void, while, with, yield</span></li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'><b>typeof</b> - will tell you what type of a value.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'><b>const</b> - is used when the variable value will not be
+     reassigned to a different value</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'><b>let</b> - is used when the variable value will be reassigned to
+     a different value</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'><b>var</b> - is legacy in JavaScript and can be seen in older
+     code. Use let instead of var.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'><b>Global Scope</b> - variables that are declared outside of a
+     block {}. Can be used throughout a program.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'><b>Local Scope</b> - variables that are declared within a block {}
+     and can only be used inside that block</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Naming Constants and Variables</li>
+</ol>
+
+<ol style='margin-top:0in' start=10 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use words that describe what the variable represents whenever
+      possible.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Can start with lowercase, uppercase, _, or $.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Cannot start with a number; however, can contain a number in the
+      name.</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Direct Assignment and Assignment by Reference</li>
+</ol>
+
+<ol style='margin-top:0in' start=11 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Direct assignment  - changes that are made effect the value
+      directly</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Assigned by Reference - Values need to be referenced to be
+      changed ex. </li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const c = { value = 1 };</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>let d = c; // c.value = 1, d.value = 1</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>d.value = 2; // c.value = 2, d.value = 2</p>
+
+<ol style='margin-top:0in' start=12 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Strings</li>
+</ol>
+
+<ol style='margin-top:0in' start=12 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Variables that start with _, generally refer to private
+      properties and methods - best not to use with your own variables</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>$ is popular jQuery library - using this may cause issues in your
+      code.</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Single quote ' can be used to create a string literal - if you use
+     ' inside your string you need to use &quot; at the front and end. Same is
+     you are using a &quot; inside your string you need to use ' on the inside
+     and outside.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>When using \ you need to be aware that it is used as a special
+     character ex. \', \&quot;, \n (end of line, \r (Carriage return), \t
+     (tab). If needed in your line of code you need to use an additional \</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>You can use the dot .  or the [] method use working with string
+     properties. The dot is used the most ex. </li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>const name  =  'joe';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>name.length;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>&lt;&lt; 3</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>name['length'];</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>&lt;&lt;3</p>
+
+<ol style='margin-top:0in' start=16 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Template Literals</li>
+</ol>
+
+<ol style='margin-top:0in' start=16 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Using `  ` in your code you create a template literal.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Can use ' and &quot; inside the line of code.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Allows you to call variables inside the string. Ex.</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>Const name = 'Joe';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>`Hello ${ name }!`</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; 'Hello Joe!'</p>
+
+<ol style='margin-top:0in' start=17 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Symbols</li>
+</ol>
+
+<ol style='margin-top:0in' start=17 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>The only way to use the symbol type is using the Symbol()
+      function.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>You can access what the symbol is with String() function.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Two variables can have the same symbol using Symbol.for().</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Numbers</li>
+</ol>
+
+<ol style='margin-top:0in' start=18 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Integer = whole number</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Decimal or float can have a decimal in them.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>To check if a value is a number - Number.isInteger(42);</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Octal and Hexadecimal Numbers</li>
+</ol>
+
+<ol style='margin-top:0in' start=19 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>0x = base 16</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>o = base 8</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>b = base 2</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>E or e multiply by 10</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Number Methods</li>
+</ol>
+
+<ol style='margin-top:0in' start=20 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>To return a number as a string in exponential notation
+      toExponential();</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>You can use two dots .. or a space and a single dot .</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>toFixed() will fix the number of decimal places to the number
+      inside of the ().</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>toPrecision() will round the decimal to the place in the ().</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Arithmetic Operations</li>
+</ol>
+
+<ol style='margin-top:0in' start=21 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>+ addition</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>- subtraction</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>* multiplication</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>/ division</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>** exponentiation</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>% gives you the remainder of a division problem (if the first
+      number has a - in front the answer will have the - as well)</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Ex. </li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>let points = 0;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>points = points + 10</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; 10</p>
+
+<ol style='margin-top:0in' start=8 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>+= compounds the by an assigned number ex. </li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>points += 10;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; 20</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>points -= 5; // decreases by 5</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>points *= 2; // doubles</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>points /= 3; // divides value by 3</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>points %= 7; changes the value to the
+remainder of the value divided by 7</p>
+
+<ol style='margin-top:0in' start=9 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Incrementing Values</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>let points = 5;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>points ++;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; 6</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>points++; // will return 6 then increase
+to 7</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>++points; // will increase by one then
+return the answer.</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>points--; // returns the value then
+decrease by one</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>--point; // decreases the value by one
+then returns the number.</p>
+
+<ol style='margin-top:0in' start=10 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Infinity - an error for a number that is too large.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>-Infinity - a number that goes below </li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>-1.7976931348623157e+308</p>
+
+<ol style='margin-top:0in' start=12 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>NaN - not a number error</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>isFinite() checks to see if a number is Infanity, -Infinity, or
+     NaN.</li>
+</ol>
+
+<ol style='margin-top:0in' start=22 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Type Coercion is when JavaScript attempts to change a sting to a
+     number to conduct a arithmetic operation. However it does not always work
+     ex. '2' * 8; &lt;&lt; 16, but &quot;2&quot;+8; &lt;&lt; 28. the + in the
+     second example in just adding the string of 2 in front of the number 8.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Converting between Strings and Numbers</li>
+</ol>
+
+<ol style='margin-top:0in' start=23 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>String to Number</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=23 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Use Coercion</li>
+  </ol>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Numbers to Strings</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=23 type=1>
+ <ol style='margin-top:0in' start=2 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>String()</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>3 +''</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>toString() - 10..toString(2); //binary base 2 &lt;&lt; '1010' -
+       28101..toString(36); // a million base 36 &lt;&lt; 'lol' (concerts the
+       number into letters to represent the digits.</li>
+  </ol>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Parsing Numbers</li>
+</ol>
+
+<ol style='margin-top:0in' start=24 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Convert binary to decimal</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>parseInt()</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>const address = '443A street'</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>parseInt(address, 10); // removes all the
+letters from address</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt;443</p>
+
+<ol style='margin-top:0in' start=4 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>parseInt(2.4,10); // removes the decimal</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>parseFloat() converts string into a decimal</li>
+</ol>
+
+<ol style='margin-top:0in' start=25 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Undefined - value given to variables that have not been assigned.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Null - no value </li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Booleans</li>
+</ol>
+
+<ol style='margin-top:0in' start=27 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>True</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>False</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Nine Falsy values</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=27 type=1>
+ <ol style='margin-top:0in' start=3 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>&quot;&quot;</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>''</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>``</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>0</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>-0</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>NaN</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>False</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Null</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Undefined</li>
+  </ol>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Logical Operators</li>
+</ol>
+
+<ol style='margin-top:0in' start=28 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>! = Logical NOT</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=28 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>!ture; // turns true to false</li>
+  </ol>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>!! = Double negative</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>&amp;&amp; = Logical AND - determines if both values are true or
+      false.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>|| = Logical OR - looks to see if any one of the given values are
+      true.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>&amp; = Bitwise AND - converts both numbers into binary</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>| = Bitwase OR</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>^ = Bitwise XOR &quot;eXclusive OR&quot;</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>&lt;&lt; = will move the number of places and multiply</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>&gt;&gt; = will move the number of places and divide</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>= is equality</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>== Soft Equality</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>=== Hard Equality</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>&gt; Greater than</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>&lt; Less Than</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>&gt;= greater than or equal to</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>&lt;= less than or equal to</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Arrays , Logic
+and Loops</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Arrays</li>
+</ol>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>const myArray = [];</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>const myArray = new Array ();</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Adding values to an Array</li>
+</ol>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>myArray[0] = 'apple'; // 0 is the index in the array where the
+      value will be place and 'apple' is what is put into the array.</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Creating Array Literals</li>
+</ol>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'> const avengers = ['Captain America', 'Iron Man', 'Thor',
+      'Hulk'];</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Remove Values from Arrays</li>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>delete avengers[3];</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Destructuring Arrays</li>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Allows us to assign multiple values at the same time.</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>const [x,y] = [1,2];</li>
+  </ol>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Can swap values [x,y=[y,x]</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Array Properties and Methods</li>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>.length allows you to find the length of an array or change the
+      length.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>pop() removes a set the last item or an assigned item from the
+      Array.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>shift() removes the first item</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>push() adds an item to end of the Array</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>unshift() adds an item to the beginning of the Array</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>concat() merge one of more arrays</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>join() turns an array into a string with items separated by a ,</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>slice() creates a subarray from the items indicated in the()</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>splice() remove an item and replace it with another item splice(3,1,
+      'newItem') - first number is the index, second number is how many items
+      to remove.</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=9 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Can be used to input an item without removing one.
+       (4,0,'newItem');</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Can be used to remove a particular item without adding
+       one.(4,1);</li>
+  </ol>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>reverse() changes the direction of and array permanently.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>sort() sorts the array into alphabetical order permanently.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Find what the index of a certain item is - indexOf();</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=12 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>If the item does not exist will return a -1</li>
+  </ol>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Returns True or False if the item is in the array -  includes();</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Multidimensional Arrays</li>
+</ol>
+
+<ol style='margin-top:0in' start=7 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>const coordinates = [[1,3],[4,2]]</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'> coordinates[0][0];// The first value of the first array</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const summer = ['Jun', 'Jul', 'Aug'];</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const winter = ['Dec', 'Jan', 'Feb'];</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const nested = [ summer, winter];</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const flat = […summer, …winter];</p>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Sets (lists)</li>
+</ol>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>= new Set ();</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>.add();</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>.size(); - tells you the size of the set</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>.has(); - lets you know if an item in the set</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>.includes(); or .indexOf(); checks for an item in the set</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>.delete(); remove an item</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>.clear(); removes all items</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Convert a set into an array Array.from();</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Maps</li>
+</ol>
+
+<ol style='margin-top:0in' start=9 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>new Map ();</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Logic</li>
+</ol>
+
+<ol style='margin-top:0in' start=10 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>if statements</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>else statements</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>switch () { case: break; case: break;} good to use when you have
+      many cases.</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Loops</li>
+</ol>
+
+<ol style='margin-top:0in' start=11 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>While Loop - while (condition) {}</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Watch out for infinite loops - a loop that has a condition that
+      will never be met.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>do { something} while (condition)</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>for (initialization ; condition ; after) { do something }</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Nested for Loops</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=11 type=1>
+ <ol style='margin-top:0in' start=5 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>for(initialization ; condition ; after ){ </li>
+  </ol>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>for(initialization ; condition ; after
+){</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;line-height:normal'>do something;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;line-height:normal'>}</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>}</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Functions</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Anonymous function:    function(){};</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Named function:   function name(){};</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Invoking function: nameOfFunction();</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Return Values: function name(){ return'something'; }</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Variable Numbers of Arguments</li>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>function arguments(){ return arguments; }</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Default Parameters: function name(parameter='value') { do
+     something with the parameter }</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Arrow Function</li>
+</ol>
+
+<ol style='margin-top:0in' start=7 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use =&gt;</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Always anonymous</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>const square = x =&gt; x*x</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,1072 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+line-height:normal'>Larrabee Week 9 notes</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Browser Object
+Model</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Every browser
+window, tab popup, frame, and iframe have a window object.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Going Global</li>
+</ol>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>In general refer to global variables without using the window
+      object.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Some functions are already global.</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Dialogs</li>
+</ol>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>The following are methods of the window object: alert(),
+      confirm(), prompt().</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>These need to be used with care, because they stop the program
+      from running until a response is given. Also users can have settings the
+      prevent them from being used repeatedly. </li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Browser information</li>
+</ol>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>The window object has a navigator property that can find out the
+      browser being used; however, users can change this information making it
+      not a good thing to use.</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Location</li>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Using the window.location property you can get information about
+      the URL. For example when used with href.</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>window.location.href </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; &quot;<a
+href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja">https://www.sitepoint.com/premium/books/javascript-novice-to-ninja</a>&quot;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>window.location.href = '<a
+href="https://www.sitepoint.com/javascript/">https://www.sitepoint.com/javascript/</a>'</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; &quot;<a
+href="https://www.sitepoint.com/javascript/">https://www.sitepoint.com/javascript/</a>&quot;</p>
+
+<ol style='margin-top:0in' start=1 type=i>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>When used with host it will return  the domain of the current URL.</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>window.location.host</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&lt;&lt; &quot;<a
+href="http://www.sitepoint.com">www.sitepoint.com</a>&quot;</p>
+
+<ol style='margin-top:0in' start=2 type=i>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Using hostname will do the same.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Using port will return the port name.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Using pathname will return the path the site is using.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Using search you will get a &quot;?&quot; followed by the query
+     string parameters.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Using hash a &quot;#&quot; and fragment identifier if there is
+     one.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Using origin you get the protocol and domain name.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Using reload() you will force the page to reload.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Using assign() you can load another resource from a URL.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Using the replace() method is almost the same as assign();
+     however, the current page will not be stored.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Using the tostring() you get a sting that contains the entire URL.</li>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Browser history</li>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Using window.history you can access the information from previous
+      visited sites.</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Using length with this you get how many pages were visited prior
+       to the current page.</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Using .go() you can go to the page prior to or after with the
+       current page being assigned 0.</li>
+  </ol>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Controlling Windows.</li>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use the window.open() method to the assigned page.</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const popup =
+window.open('https://sitepoint.com','</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>SitePoint','width=400,height=400,resizable=yes');</p>
+
+<ol style='margin-top:0in' start=2 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>The close() method will close a window.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Using the moveTo() method you can assign an X and Y coordinate to
+     move to on the screen. </li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>window.moveTo(0,0); // will move the
+window to the top-left corner of the screen</p>
+
+<ol style='margin-top:0in' start=4 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Use the resizeTo() method to resize the windows dimensions.</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>window.resizeTo(600,400);</p>
+
+<ol style='margin-top:0in' start=7 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Screen information</li>
+</ol>
+
+<ol style='margin-top:0in' start=7 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>You can use window.screen to find the size of the screen that you
+      page is being displayed on.</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=7 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Use .height to find the height and .width to find the width.</li>
+  </ol>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>window.screen.height</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&lt;&lt; 1024</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>window.screen.width</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&lt;&lt; 1280</p>
+
+<ol style='margin-top:0in' start=2 type=i>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>To find the height and width excluding any operating system menus
+     use .availHeight and .availWidth</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>window.screen.availWidth</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&lt;&lt; 1280</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>window.screen.availHeight</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&lt;&lt; 995</p>
+
+<ol style='margin-top:0in' start=3 type=i>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Use .colorDepth to find the color bit depth of the screen</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>window.screen.colorDepth;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&lt;&lt; 24</p>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>The Document Object</li>
+</ol>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Using document.write() simply writes something on the page. If
+      the page has loaded it will completely replace the document.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Using the document.write() is heavily frowned on.</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=9 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Cookies</li>
+</ol>
+
+<ol style='margin-top:0in' start=9 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Are text files with name/value pairs separated by a ;</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&quot;name=Superman; hero=true;
+city=Metropolis&quot;</p>
+
+<ol style='margin-top:0in' start=2 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Use document.cookie either assign or read the current page
+     cookies.</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>document.cookie = 'name=Batman'</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; &quot;name=Batman&quot;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>document.cookie = 'city=Gotham'</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; &quot;city=Gotham&quot;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>Or</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>document.cookie:</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; &quot;name=Batman; hero=true;
+city=Gotham&quot;</p>
+
+<ol style='margin-top:0in' start=3 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>You can use split to break a cookie into an array and use a for of
+     loop to get the values.</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const cookies =
+document.cookie.split(&quot;; &quot;);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>for (crumb of cookies){</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    const [key,value] =
+crumb.split(&quot;=&quot;);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    console.log(`The value of ${key} is
+${value}`);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>}</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; The value of name is Batman</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>The value of hero is true</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>The value of city is Gotham</p>
+
+<ol style='margin-top:0in' start=4 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Cookie Expiry Dates</li>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=a>
+ <ol style='margin-top:0in' start=1 type=i>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Cookies delete once the session is closed by default.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>You can set the date for cookies to expire or make them
+      persistent.</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>const expiryDate = new Date(); </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>const tomorrow = expiryDate.getTime() +
+1000 * 60 * 60 * 24;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>expiryDate.setTime(tomorrow);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>document.cookie = `name=Batman;
+expires=${ expiryDate.toUTCString()}`;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<ol style='margin-top:0in' start=5 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Path and Domain of Cookies</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>document.cookie = 'name=Batman; path=/'</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>Or </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>document.cookie = 'name=Batman;
+domain=sitepoint.com';</p>
+
+<ol style='margin-top:0in' start=6 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Secure Cookies</li>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=a>
+ <ol style='margin-top:0in' start=1 type=i>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>; secure will ensure the cookies are only sent over HTTPS.</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>document.cookie = 'name=Batman; secure';</p>
+
+<ol style='margin-top:0in' start=7 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Deleting Cookies</li>
+</ol>
+
+<ol style='margin-top:0in' start=7 type=a>
+ <ol style='margin-top:0in' start=1 type=i>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Set them to expire in the past.</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>document.cookie = 'name=Batman;
+expires=Thu, 01 Jan 1970 00:00:01 GMT';</p>
+
+<ol style='margin-top:0in' start=10 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Timing Functions</li>
+</ol>
+
+<ol style='margin-top:0in' start=10 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>You can schedule the execution of a function and repeatedly
+      execute functions.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>setTimeout() </li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>window.setTimeout( () =&gt;
+alert(&quot;Time's Up!&quot;), 3000);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; 4</p>
+
+<ol style='margin-top:0in' start=3 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>clearTimeout() - to cancel a timeout</li>
+</ol>
+
+<ol style='margin-top:0in' start=11 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>setInterval()</li>
+</ol>
+
+<ol style='margin-top:0in' start=11 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Works similar to setInterval() but it will repeatedly invoke a
+      callback function.</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>function chant(){
+console.log('Beetlejuice'); }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>Then</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const summon = window.setInterval(chant,1000);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; 6</p>
+
+<ol style='margin-top:0in' start=2 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>.clearInterval -  clears the interval.</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>window.clearInterval(summon);</p>
+
+<ol style='margin-top:0in' start=12 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Animation</li>
+</ol>
+
+<ol style='margin-top:0in' start=12 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>You can use the setTimeOut() and setInterval() to animate
+      elements on a webpage.</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>HTML5 APIs</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Data Attribute</li>
+</ol>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>The data-???? Is a way of embedding data in a webpage that is
+      only to be used by JavaScript.</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;div id='hero' data-powers='flight
+superSpeed'&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    Superman</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;/div&gt;</p>
+
+<ol style='margin-top:0in' start=2 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>To retrieve and use the data use dataset</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const superman =
+document.getElementById('hero');</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const powers = superman.dataset.powers;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; 'flight superSpeed'</p>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>HTML 5 Web Storage</li>
+</ol>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use localStorage to save information to be used locally.</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>setItem() - save to local storage</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>getItem() - retrieve from local storage</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>removeItem - removes an item from local storage</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Delete operator can be used as well</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Clear() will clear everything from local storage.</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Key tell us the key of the item that changed</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>newValue tells us the new value</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>oldValue tells us the old value</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>storageArea tells us </li>
+  </ol>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>addEventListener('storage', (event)
+=&gt; {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>console.log(`The ${event.key} was
+updated from ${event.oldValue} to ${event.newValue} and saved in </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>${event.storageArea}`) }, false);</p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Geolocation</li>
+</ol>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Navigator.geolocation</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>getCurrentPosition()</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Position.speed</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Position.altitude</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Position.heading</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Position.timestamp</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Position.accuracy</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Position.altitudeAccuracy</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>watchPosition will call a callback function every time the
+       position of the device is update.</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>clearWatch</li>
+  </ol>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Web Workers</li>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Allow processes to be run in the background</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Worker() - see the factors of example in VS Code</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Shared Web Workers - allows different scripts on the same domain.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Service Workers - Allows a worker script to run in the
+      background.</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Web Sockets</li>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>New protocol that allows two-way communication with a sever</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>See web socket example in VS Code.</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Notifications</li>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Allows you to show messages using the system's notifications.</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>if(window.Notification) {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    Notification.requestPermission();</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>}</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>if(window.Notification) {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    Notification.requestPermission()</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .then((permission) =&gt; {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        if(Notification.permission ===
+'granted') {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        new Notification('Hello
+JavaScript!');</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    });</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>}</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const notification = new
+Notification('JavaScript: Novice to Ninja',{</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    body: 'The new book from SitePoint',</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    icon: 'sitepointlogo.png'</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>});</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>notification.close();</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>notification.addEventListener('click', ()
+=&gt; {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>window.open('https://sitepoint.com')</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>}, false);</p>
+
+<ol style='margin-top:0in' start=7 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Multimedia</li>
+</ol>
+
+<ol style='margin-top:0in' start=7 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>&lt;audio&gt; and &lt;video&gt; are used to insert audio and
+      video clips into a website. The Media API allows you to control the playback
+      of the media.</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;audio src='/song.mp3' controls&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>Your browser does not support the audio
+element.</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;/audio&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>Or</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;video src='http://movie.mp4'
+controls&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    Your browser does not support the
+video element.</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;/video&gt;</p>
+
+<ol style='margin-top:0in' start=2 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Reference the media in the DOM</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const video =
+document.getElementsByTagName('video')[0];</p>
+
+<ol style='margin-top:0in' start=3 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Play() will start the clip</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Pause() will pause the clip</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Volume can be used to set the volume</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>video.volume = 0.9;</p>
+
+<ol style='margin-top:0in' start=6 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Muted can be used to mute the audio if set to true.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>playbackRate can fast-forward or rewind</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>video.playbackRate = 8; // fast-forward
+at 8 times as fast</p>
+
+<ol style='margin-top:0in' start=8 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Loop when set to true will loop the media</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Duration will set how long the media will last.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Checking Properties are available</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>video.addEventListener('loadedmetadata',
+() =&gt; { console.log(video.duration); });</p>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Other APIs</li>
+</ol>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Drawing with Canvas</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Allows graphics to be drawn on a page in real time using Java
+       Script.</li>
+  </ol>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&lt;canvas id='canvas' width='400'
+height='400'&gt;Sorry, but your browser does not support the canvas
+element&lt;/canvas&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>const canvasElement =
+document.getElementById('canvas');</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>const context =
+canvasElement.getContext('2d');</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.fillStyle = &quot;#0000cc&quot;;
+// a blue fill color </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.strokeStyle = &quot;#ccc&quot;;
+// a gray stroke color</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.lineWidth = 4;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.fillRect(10,10,100,50);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.strokeRect(10,100,100,50);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.beginPath();</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.moveTo(130, 50);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.lineTo(180, 50);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.moveTo(155, 50);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.lineTo(155, 90);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.strokeStyle = '#c00';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.lineWidth = 15;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.stroke();</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.beginPath();</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.arc(200, 200, 30, 0, Math.PI *
+2, false);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.strokeStyle = '#ff0';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.lineWidth = 4;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.stroke();</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.fillStyle = '#0c0'; // a blue
+fill color</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.font = 'bold 26px sans-serif';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>context.fillText('Hello', 20, 200);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>Will result in the following</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'><img border=0 width=375 height=316
+id="Picture 1" src="index_files/image001.png"
+alt="Graphical user interface, application&#10;&#10;Description automatically generated"></p>
+
+<ol style='margin-top:0in' start=9 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Shims and Polyfills</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>The terms shim and polyfill are often
+used interchangeably. The main difference between them is that a shim is a
+piece of code that adds some missing functionality to a browser, although the
+implementation method may differ slightly from the standard API. A polyfill is
+a shim that achieves the same functionality, while also using the API commands
+that would be used if the feature was supported natively.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

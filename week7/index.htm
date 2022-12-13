@@ -1,0 +1,1360 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Further
+Functions</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Call and Apply Methods</li>
+</ol>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use call() to set the value of this inside a function</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>function sayhello(greeting='Hello'){</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>Return '${ greeting }, my name is ${
+this.name }';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>}</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>sayhello.call(Rick, 'How do you do');</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; 'How do you do, my name is Rick'</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Custom Properties</li>
+</ol>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use .description to describe what a function does</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Momoization</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <ol style='margin-top:0in' start=2 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>This allows you to cache the result of a function that takes
+       longer to complete and get the result later</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>You can invoke the function multiple times and it will create a
+       list that you can get the results from</li>
+  </ol>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Immediately Invoked Function Expression (IIFE)</li>
+</ol>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>An anonymous function that is called as right after it is defined
+      by placing () at the end</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Temporary Variables</li>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use temp within a function to construct  a variable while a IIFE
+      is invoked</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Initialization Code</li>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>IIFE can be used to initialize code that will not be used again
+      in a program</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Safe Use of Strict Mode</li>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Using 'use strict' inside an IIFE keeps you from </li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Creating Self-contained Code Blocks</li>
+</ol>
+
+<ol style='margin-top:0in' start=7 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>IIFE can be used to enclose a functions inside of the main
+      function that will run on its own and not interfere with other parts of
+      the function</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Functions that Define and Rewrite Themselves</li>
+</ol>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>A Function can define itself and rewrite itself</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>function party (){</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>console.log('Wow this is amazing!');</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>party = function(){</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;line-height:normal'>console.log('Been there, got the
+T-Shirt');</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>}</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>}</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>In the above example the first time the
+function party() is called the Wow statement will appear every other time it is
+called the been there statement will appear</p>
+
+<ol style='margin-top:0in' start=2 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>You can redefine the function</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const beachParty = party;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>Then call the beachParty(); and then this
+will only call the Wow statement each time; however, if you call the party()
+after calling beachParty() it will still move to the been there statement</p>
+
+<ol style='margin-top:0in' start=9 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Init-Time Branching</li>
+</ol>
+
+<ol style='margin-top:0in' start=9 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>This is used to check if a feature is supported and if it is not
+      then the function is changed to the supported version and when it is
+      called again the browser does not need to check if the feature is
+      supported and quickly runs the supported version. This is done with an if
+      statement</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>function ride(){</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>    if (window.unicorn) { </p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>        ride = function(){</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>        // some code that uses the brand
+new and sparkly unicorn methods</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>        return 'Riding on a unicorn is
+the best!';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>        }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>    } else {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>        ride = function(){</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>        // some code that uses the older
+pony methods</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>        return 'Riding on a pony is
+still pretty good';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>        }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>    }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>    return ride();</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>}</p>
+
+<ol style='margin-top:0in' start=10 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Recursive Functions</li>
+</ol>
+
+<ol style='margin-top:0in' start=10 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>A function that invokes itself until a certain condition is met</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Callbacks</li>
+</ol>
+
+<ol style='margin-top:0in' start=11 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Functions passed to other functions as arguments</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Event-driven Asynchronous Programming</li>
+</ol>
+
+<ol style='margin-top:0in' start=12 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Using call backs to get around the single thread nature of
+      JavaScript</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Can cause Callback Hell if used too many times in a function, making
+      it hard to understand</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Promises</li>
+</ol>
+
+<ol style='margin-top:0in' start=13 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Do not do anything that can't already be done with call backs;
+      however, make the code easier to understand</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>const dice = {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>sides: 6,</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>    roll() {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>        return Math.floor(this.sides *
+Math.random()) + 1;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>    }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>}</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>console.log('Before the roll');</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'><span style='background:yellow'>const
+roll = new Promise( (resolve,reject) =&gt; {</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'><span style='background:yellow'>   
+const n = dice.roll();</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'><span style='background:yellow'>    if(n
+&gt; 1){</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'><span style='background:yellow'>       
+setTimeout(()=&gt;{resolve(n)},n*200);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'><span style='background:yellow'>    }
+else {</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'><span style='background:yellow'>       
+setTimeout(()=&gt;reject(n),n*200);</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'><span style='background:yellow'>    }</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'><span style='background:yellow'>});</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'><span style='background:yellow'>roll.then(result
+=&gt; console.log(`I rolled a ${result}`) )</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'><span style='background:yellow'>.catch(result
+=&gt; console.log(`Drat! ... I rolled a ${result}`) );</span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>console.log('After the roll');</p>
+
+<ol style='margin-top:0in' start=1 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Chaining promises together</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>login(userName)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>.then(user =&gt; getPlayerInfo(user.id))</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>.then(info =&gt; loadGame(info))</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>.catch( throw error)</p>
+
+<ol style='margin-top:0in' start=14 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Async Functions</li>
+</ol>
+
+<ol style='margin-top:0in' start=14 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use the async keyword</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Allows you to use asynchronous code as if it was synchronous</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>async function loadGame(userName) {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    try {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        const user = await
+login(userName);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        const info = await getPlayerInfo
+(user.id);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        // load the game using the
+returned info</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    catch (error){</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        throw error;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>}</p>
+
+<ol style='margin-top:0in' start=15 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Functions that return Functions</li>
+</ol>
+
+<ol style='margin-top:0in' start=15 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>A function can return a function</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>function greeter(greeting = 'Hello') {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    return function() {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        console.log(greeting);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>}</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const englishGreeter = greeter();</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>englishGreeter();</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; Hello</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const frenchGreeter = greeter('Bonjour');</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>frenchGreeter();</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; Bonjour</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const germanGreeter = greeter('Guten
+Tag');</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>germanGreeter();</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;&lt; Guten Tag</p>
+
+<ol style='margin-top:0in' start=16 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Closures</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>function closure() {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    const a = 1.8;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    const b = 32;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    return c =&gt; c * a + b;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>}</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>AJAX</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Ajax is a
+technique that allows web pages to communicate asynchronously with a server,
+and it dynamically updates web pages without reloading. This enables data to be
+sent and received in the background, as well as portions of a page to be
+updated in response to user events, while the rest of the program continues to
+run.</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='line-height:normal'><i><span style='font-size:9.0pt;
+color:#595959'>From &lt;</span></i><a
+href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/13/"><i><span
+style='font-size:9.0pt'>https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/13/</span></i></a><i><span
+style='font-size:9.0pt;color:#595959'>&gt; </span></i></p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>FETCH API - currently the standard for requesting and sending data
+     asynchronously</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Use fetch()</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>fetch('https://example.com/data')</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>.then( // code that handles the response
+)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>.catch( // code that runs if the server
+returns an error )</p>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>&nbsp;</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>const url = 'https:example.com/data';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>fetch(url)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>.then((response) =&gt; {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>    if(response.ok) {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>        return response;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>    }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>    throw Error(response.statusText);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>})</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>.then( response =&gt; // do something
+with response )</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>.catch( error =&gt; console.log('There
+was an error!') )</p>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Redirects - currently no support for redirect()</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>fetch(url)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>.then( response =&gt;
+response.redirect(newURL)); // redirects to another URL</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>.then( // do something else )</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>.catch( error =&gt; console.log('There
+was an error: ', error))</p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Text responses</li>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use text() method to receive a stream of text and turns it into a
+      string for JavaScript</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>fetch(url)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>.then( response =&gt; response.text() );
+// transforms the text stream into a JavaScript string</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>.then( text =&gt; console.log(text) )</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>.catch( error =&gt; console.log('There
+was an error: ', error))</p>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>File Responses</li>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use the blob() method to read a file od raw data, such as an
+      image or spreadsheet</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>fetch(url)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>.then( response =&gt; response.blob() );
+// transforms the data into a blob object</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>.then( blob =&gt; console.log(blob.type)
+)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>.catch( error =&gt; console.log('There
+was an error: ', error))</p>
+
+<ol style='margin-top:0in' start=7 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>JSON Responses</li>
+</ol>
+
+<ol style='margin-top:0in' start=7 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Most common format for AJAX response</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>fetch(url)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>.then( response =&gt; response.json() );
+// transforms the JSON data into a JavaScript object</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>.then( data =&gt; console.log(Object.entries(data))
+)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>.catch( error =&gt; console.log('There
+was an error: ', error))</p>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Creating Response Objects</li>
+</ol>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Can be useful to use if you are creating an API that needs to
+      send a response, or if you need to send a dummy response for testing</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const response = new Response( 'Hello!',
+{</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    ok: true,</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    status: 200,</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    statusText: 'OK',</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    type: 'cors',</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    url: '/api'</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>});</p>
+
+<ol style='margin-top:0in' start=9 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Request Interface</li>
+</ol>
+
+<ol style='margin-top:0in' start=9 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use Request() to have greater control over a request being made</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>fetch('https://example.com/data', {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    method: 'GET',</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    mode: 'cors',</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    redirect: 'follow',</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    cache: 'no-cache'</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>})</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>.then( // do something with the response
+)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>.catch( // handle any errors)</p>
+
+<ol style='margin-top:0in' start=10 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Header Interface</li>
+</ol>
+
+<ol style='margin-top:0in' start=10 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Used to pass additional information about the request</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const headers = new Headers({
+'Content-Type': 'text/plain', 'Accept-Charset' : 'utf-8',
+'Accept-Encoding':'gzip,deflate' })</p>
+
+<ol style='margin-top:0in' start=11 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Putting it all together</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>const url = 'https:example.com/data';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>const headers = new Headers({
+'Content-Type': 'text/plain', 'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,deflate'
+})</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>const request = (url,{</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>    headers: headers</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>})</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>fetch(request)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>.then( function(response) {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>    if(response.ok) {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>        return response;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>    }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>    throw Error(response.statusText);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>})</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>.then( response =&gt; // do something
+with response )</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>.catch( error =&gt; console.log('There
+was an error!') )</p>
+
+<ol style='margin-top:0in' start=12 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Receiving information</li>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;!doctype html&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;html lang='en'&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;head&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;meta charset='utf-8'&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;title&gt;Ajax Example&lt;/title&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;/head&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;body&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;button id='number'&gt;Number
+Fact&lt;/button&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;button id='chuck'&gt;Chuck Norris
+Fact&lt;/button&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;div id='output'&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    Ajax response will appear here</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;/div&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;script
+src='main.js'&gt;&lt;/script&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;/body&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>Then in the JS file</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const textButton =
+document.getElementById('number');</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const apiButton = document.getElementById('chuck');</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const outputDiv =
+document.getElementById('output');</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const textURL = '<a
+href="http://numbersapi.com/random">http://numbersapi.com/random</a>';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const apiURL = '<a
+href="https://api.chucknorris.io/jokes/random">https://api.chucknorris.io/jokes/random</a>';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>textButton.addEventListener('click', ()
+=&gt; {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    fetch(textURL)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .then( response =&gt; {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        outputDiv.innerHTML = 'Waiting
+for response...';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    if(response.ok) {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        return response;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        throw Error(response.statusText);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    })</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .then( response =&gt; response.text()
+)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .then( text =&gt; outputDiv.innerText
+= text )</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .catch( error =&gt;
+console.log('There was an error:', error))</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>},false);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>apiButton.addEventListener('click', ()
+=&gt; {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    fetch(apiURL)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .then( response =&gt; {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        outputDiv.innerHTML = 'Waiting
+for response...';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    if(response.ok) {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        return response;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    throw Error(response.statusText);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    })</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .then( response =&gt; response.json()
+)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .then( data =&gt; outputDiv.innerText
+= data.value )</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .catch( error =&gt;
+console.log('There was an error:', error))</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>},false);</p>
+
+<ol style='margin-top:0in' start=13 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Sending information</li>
+</ol>
+
+<ol style='margin-top:0in' start=13 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>You can use AJAX to send information as well</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;!doctype html&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;html lang='en'&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;head&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    &lt;meta charset='utf-8'&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    &lt;title&gt;To Do List&lt;/title&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;/head&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;body&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    &lt;form id='todo'
+action='https://jsonplaceholder.typicode.com/todos' method='POST'&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        &lt;input type='text'
+name='task'  placeholder='Add Task' autofocus required&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        &lt;button type='submit'&gt;Add
+Task&lt;/button&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    &lt;/form&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    &lt;script
+src='main.js'&gt;&lt;/script&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;/body&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&lt;/html&gt;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>Main js file</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const form = document.forms['todo'];</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>form.addEventListener('submit', addTask,
+false);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>function addTask(event) {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    event.preventDefault();</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    const number = form.task.value;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    const task = {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        userId: 1,</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        title: form.task.value,</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        completed: false</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    const data = JSON.stringify(task);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    const url = '<a
+href="https://jsonplaceholder.typicode.com/todos">https://jsonplaceholder.typicode.com/todos</a>';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    const headers = new Headers({</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        'Accept': 'application/json',</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        'Content-Type':
+'application/json'</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    });</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    const request = new Request(url,</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        method: 'POST',</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        header: headers,</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        body: data</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    )</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    fetch(request)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .then( response =&gt; response.json()
+)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .then( task =&gt; console.log(`Task
+saved with an id of ${task.id}`) )</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .catch( error =&gt;
+console.log('There was an error:', error))</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>}</p>
+
+<ol style='margin-top:0in' start=14 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Form Data with AJAX</li>
+</ol>
+
+<ol style='margin-top:0in' start=14 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>You can also use AJAX to complete forms</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const request = new Request(form.action,</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>{</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    method: form.method,</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    header: headers,</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    body: data</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>}</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>Use this to reduce the amount of code</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>const form = document.forms['todo'];</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>form.addEventListener('submit', addTask,
+false);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>function addTask(event) {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    event.preventDefault();</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    const task = new FormData(form);</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    const url =
+`http://echo.jsontest.com/id/1/title/${form.task.value}`;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    const headers = new Headers({</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        'Accept': 'application/json',</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        'Content-Type':
+'application/json'</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    });</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    const request = new Request(url,</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        method: 'POST',</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        mode: 'cors',</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        header: headers,</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>        body: JSON.stringify(task)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    }</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    )</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    fetch(request)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .then( response =&gt; response.json()
+)</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .then( data =&gt;
+console.log(`${data.title} saved with an id of ${data.id}`) )</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>    .catch( error =&gt;
+console.log('There was an error:', error))</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>}</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,693 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"var\(--font-code\)";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Inter;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+line-height:normal'>Larrabee Week 10 notes</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
+
+<p style='margin:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif'>Client-side
+form validation</span></p>
+
+<p style='margin:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<p style='margin:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif'>You
+want to validate anything users send to a form to keep from getting bad entries
+that could break your application.</span></p>
+
+<p style='margin:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='vertical-align:middle'>What is form validation?</li>
+</ol>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='vertical-align:middle'>This is things like making
+      fields required or formatted in the certain way.</li>
+  <li class=MsoNormal style='vertical-align:middle'>Validation that is done by
+      the browser is called client-side validation.</li>
+  <li class=MsoNormal style='vertical-align:middle'>Validation that is done by
+      the server is called server-side validation.</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <li class=MsoNormal style='vertical-align:middle'>Types of client-side
+     validation</li>
+</ol>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='vertical-align:middle'>Built-in form validation -
+      uses HTML for validation</li>
+  <li class=MsoNormal style='vertical-align:middle'>JavaScript - uses code to
+      validate</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal style='vertical-align:middle'>Built-in Validation types</li>
+</ol>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='vertical-align:middle'>Required</li>
+  <li class=MsoNormal style='vertical-align:middle'>Minlength - minimum length
+      of textual data</li>
+  <li class=MsoNormal style='vertical-align:middle'>Maxlength - maximum length
+      of textual data</li>
+  <li class=MsoNormal style='vertical-align:middle'>Min - specifies the minimum
+      value numerical input types</li>
+  <li class=MsoNormal style='vertical-align:middle'>Max - specifies the maximum
+      value numerical input types</li>
+  <li class=MsoNormal style='vertical-align:middle'>Type - what type of data
+      does the input need to be</li>
+  <li class=MsoNormal style='vertical-align:middle'>Pattern - specifies a
+      regular expression that defines the pattern the data needs to be in</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <li class=MsoNormal style='vertical-align:middle'>Validating against a regular
+     expression</li>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='vertical-align:middle'>a - matches one character
+      that is a (not b, not aa, and so on)</li>
+  <li class=MsoNormal style='vertical-align:middle'>abc - Matches a, followed
+      by b, followed by c.</li>
+  <li class=MsoNormal style='vertical-align:middle'>example</li>
+ </ol>
+</ol>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif'>&lt;form&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif'>  &lt;label
+for=&quot;choose&quot;&gt;Would you prefer a banana or a cherry?&lt;/label&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif'>  &lt;input
+id=&quot;choose&quot; name=&quot;i-like&quot; required
+pattern=&quot;[Bb]anana|[Cc]herry&quot; /&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif'> 
+&lt;button&gt;Submit&lt;/button&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif'>&lt;/form&gt;</span></p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <li class=MsoNormal style='vertical-align:middle'>Constraining the values from
+     your entries</li>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='vertical-align:middle'>Example</li>
+ </ol>
+</ol>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-family:"var(--font-code)",serif;color:#1B1B1B'>&lt;form&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-family:"var(--font-code)",serif;color:#1B1B1B'>  &lt;div&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-family:"var(--font-code)",serif;color:#1B1B1B'>   
+&lt;labelfor=&quot;choose&quot;&gt;Would you prefer a banana or a
+cherry?&lt;/label&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-family:"var(--font-code)",serif;color:#1B1B1B'>   
+&lt;inputtype=&quot;text&quot;id=&quot;choose&quot;name=&quot;i-like&quot;requiredminlength=&quot;6&quot;maxlength=&quot;6&quot;/&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-family:"var(--font-code)",serif;color:#1B1B1B'>&lt;/div&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-family:"var(--font-code)",serif;color:#1B1B1B'>&lt;div&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-family:"var(--font-code)",serif;color:#1B1B1B'>  
+&lt;labelfor=&quot;number&quot;&gt;How many would you like?&lt;/label&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-family:"var(--font-code)",serif;color:#1B1B1B'>       
+&lt;inputtype=&quot;number&quot;id=&quot;number&quot;name=&quot;amount&quot;value=&quot;1&quot;min=&quot;1&quot;max=&quot;10&quot;/&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-family:"var(--font-code)",serif;color:#1B1B1B'>  &lt;/div&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-family:"var(--font-code)",serif;color:#1B1B1B'>  &lt;div&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-family:"var(--font-code)",serif;color:#1B1B1B'>   
+&lt;button&gt;Submit&lt;/button&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-family:"var(--font-code)",serif;color:#1B1B1B'>  &lt;/div&gt;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-family:"var(--font-code)",serif;color:#1B1B1B'>&lt;/form&gt;</span></p>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Validating
+     forms using JavaScript</li>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Most browsers
+      support the Constraint Validation API. Available for the following
+      methods and properties.</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;vertical-align:
+middle'><span style='font-size:10.0pt;line-height:107%;font-family:Symbol;
+color:#1B1B1B'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a
+href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement"><span
+style='font-family:"var(--font-code)",serif;background:white'>HTMLButtonElement</span></a><span
+style='font-family:"Inter",serif;color:#1B1B1B;background:white'>&nbsp;(represents
+a&nbsp;</span><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button"><span
+style='font-family:"var(--font-code)",serif;background:white'>&lt;button&gt;</span></a><span
+style='font-family:"Inter",serif;color:#1B1B1B;background:white'>&nbsp;element)</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;vertical-align:
+middle'><span style='font-size:10.0pt;line-height:107%;font-family:Symbol;
+color:#1B1B1B'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a
+href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement"><span
+style='font-family:"var(--font-code)",serif;background:white'>HTMLFieldSetElement</span></a><span
+style='font-family:"Inter",serif;color:#1B1B1B;background:white'>&nbsp;(represents
+a&nbsp;</span><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset"><span
+style='font-family:"var(--font-code)",serif;background:white'>&lt;fieldset&gt;</span></a><span
+style='font-family:"Inter",serif;color:#1B1B1B;background:white'>&nbsp;element)</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;vertical-align:
+middle'><span style='font-size:10.0pt;line-height:107%;font-family:Symbol;
+color:#1B1B1B'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a
+href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement"><span
+style='font-family:"var(--font-code)",serif;background:white'>HTMLInputElement</span></a><span
+style='font-family:"Inter",serif;color:#1B1B1B;background:white'>&nbsp;(represents
+an&nbsp;</span><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input"><span
+style='font-family:"var(--font-code)",serif;background:white'>&lt;input&gt;</span></a><span
+style='font-family:"Inter",serif;color:#1B1B1B;background:white'>&nbsp;element)</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;vertical-align:
+middle'><span style='font-size:10.0pt;line-height:107%;font-family:Symbol;
+color:#1B1B1B'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a
+href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement"><span
+style='font-family:"var(--font-code)",serif;background:white'>HTMLOutputElement</span></a><span
+style='font-family:"Inter",serif;color:#1B1B1B;background:white'>&nbsp;(represents
+an&nbsp;</span><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output"><span
+style='font-family:"var(--font-code)",serif;background:white'>&lt;output&gt;</span></a><span
+style='font-family:"Inter",serif;color:#1B1B1B;background:white'>&nbsp;element)</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;vertical-align:
+middle'><span style='font-size:10.0pt;line-height:107%;font-family:Symbol;
+color:#1B1B1B'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a
+href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement"><span
+style='font-family:"var(--font-code)",serif;background:white'>HTMLSelectElement</span></a><span
+style='font-family:"Inter",serif;color:#1B1B1B;background:white'>&nbsp;(represents
+a&nbsp;</span><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select"><span
+style='font-family:"var(--font-code)",serif;background:white'>&lt;select&gt;</span></a><span
+style='font-family:"Inter",serif;color:#1B1B1B;background:white'>&nbsp;element)</span></p>
+
+<p class=MsoNormal style='margin-left:1.0in;text-indent:-.25in;vertical-align:
+middle'><span style='font-size:10.0pt;line-height:107%;font-family:Symbol;
+color:#1B1B1B'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a
+href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement"><span
+style='font-family:"var(--font-code)",serif;background:white'>HTMLTextAreaElement</span></a><span
+style='font-family:"Inter",serif;color:#1B1B1B;background:white'>&nbsp;(represents
+a&nbsp;</span><a
+href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea"><span
+style='font-family:"var(--font-code)",serif;background:white'>&lt;textarea&gt;</span></a><span
+style='font-family:"Inter",serif;color:#1B1B1B;background:white'>&nbsp;element)</span></p>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=2 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'><span
+      style='background:white'>You can use the following properties for the
+      above elements</span></li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=2 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'><span
+       style='background:white'>validationMessage: returns a message describing
+       what was done wrong.</span></li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'><span
+       style='background:white'>validity - returns a ValidityState object that
+       contains several properties.</span></li>
+  </ol>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=2 type=a>
+  <ol style='margin-top:0in' start=2 type=i>
+   <ol style='margin-top:0in' start=1 type=1>
+    <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'><span
+        style='background:white'>patternMismatch - true if value does not match
+        /  false if value does match</span></li>
+    <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'><span
+        style='background:white'>tooLong - true if the value is longer than
+        allowed / false if the value is shorter or equal to</span></li>
+    <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'><span
+        style='background:white'>tooShort - true if the value is shorter than
+        allowed /  false if the value is longer or equal to</span></li>
+    <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'><span
+        style='background:white'>rangeOverflow - true if the value is greater
+        than the maximum specified / false if it is less than or equal to the
+        max</span></li>
+    <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'><span
+        style='background:white'>rangeUnderflow - true if the value is less
+        than the min specified / false if it is more or equal to</span></li>
+    <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'><span
+        style='background:white'>typeMismatch - true if the input is not the
+        correct type (phone, email …) / false if the input matches the type</span></li>
+    <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'><span
+        style='background:white'>valid - true if the element meets all the
+        valid constraints / false if not met</span></li>
+    <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'><span
+        style='background:white'>valueMissing - true if a required element is
+        missing / false if all required are present</span></li>
+   </ol>
+  </ol>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=2 type=a>
+  <ol style='margin-top:0in' start=3 type=i>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'><span
+       style='background:white'>willValidate - returns true if the element will
+       be validated</span></li>
+  </ol>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=3 type=a>
+  <li class=MsoNormal style='vertical-align:middle'>Other methods that can be
+      used</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=3 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='vertical-align:middle'>checkValidity() - true if
+       the element's value if valid / false if not valid</li>
+   <li class=MsoNormal style='vertical-align:middle'>reprtValidity() - reports
+       invalid fields. Good to use with perventDefault() in an onSubmit event
+       handler</li>
+   <li class=MsoNormal style='vertical-align:middle'>setCustomValidation(message)
+       - add a custom error message.</li>
+  </ol>
+ </ol>
+</ol>
+
+<p style='margin:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<p style='margin:0in'><span style='font-size:11.0pt;font-family:"Calibri",sans-serif'>&nbsp;</span></p>
+
+<p style='margin:0in'><span style='font-family:"Calibri",sans-serif;color:#1B1B1B'>Using
+the Fetch API</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:27.0pt'><span
+style='font-family:"Calibri",sans-serif;color:#1B1B1B'>&nbsp;</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:27.0pt'><span
+style='font-family:"Calibri",sans-serif;color:#1B1B1B'>Provides a JavaScript
+interface for accessing and manipulating parts of the protocol, such as
+requests and responses.</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:27.0pt'><span
+style='font-family:"Calibri",sans-serif;color:#1B1B1B'>&nbsp;</span></p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Will not
+     reject on HTTP error status even if the response if a HTTP 404 or 500</li>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Unless fetch()
+     is called with the credentials option set to include</li>
+</ol>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Will not send
+      cookies</li>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Will not set
+      cookies</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Basic fetch
+     example</li>
+</ol>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif'>fetch('http://example.com/movies.json')</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif'>  .then((response)
+=&gt; response.json())</span></p>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:0in;margin-left:.75in'><span
+style='font-size:11.0pt;font-family:"Calibri",sans-serif'>  .then((data) =&gt;
+console.log(data));</span></p>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Supplying
+     request options</li>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Can accept a
+      second parameter, an init object allows you to control many different
+      settings.</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Accept</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Accept-Language</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Content-Language</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Content-Type</li>
+  </ol>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Sending a
+     request with credentials included</li>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Credentials:
+      'include'</li>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>To send
+      request of the same origin credentials: 'same-origin'</li>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>To not
+      include credentials: 'omit'</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Uploading JSON
+     data</li>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Can POST
+      JSON-encoded data</li>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Method: 'POST'
+      or 'PUT'</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=7 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Uploading a
+     file</li>
+</ol>
+
+<ol style='margin-top:0in' start=7 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Use HTML
+      &lt;input type=&quot;file&quot;/&gt;</li>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Input element
+      FormData()</li>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Fetch()</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Uploading
+     multiple files</li>
+</ol>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='vertical-align:middle'><span style='color:#1B1B1B'>Use
+      HTML &lt;input type=&quot;file&quot; multiple/&gt;</span></li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <ol style='margin-top:0in' start=2 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Input element
+      FormData()</li>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Fetch()</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=9 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Processing a
+     text file line by line</li>
+</ol>
+
+<ol style='margin-top:0in' start=9 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>You need to
+      create a line iterator to process text</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=10 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Checking if a
+     fetch was successful</li>
+</ol>
+
+<ol style='margin-top:0in' start=10 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Check to see
+      if the Response.ok property is true</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=11 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Supply you own
+     request object</li>
+</ol>
+
+<ol style='margin-top:0in' start=11 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Use the
+      Request() constructor and pass in as a fetch()</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=12 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Headers</li>
+</ol>
+
+<ol style='margin-top:0in' start=12 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Allows you to
+      create your own headers</li>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Headers()
+      constructor</li>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Use to check
+      is the content type is correct before processing</li>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Guard</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=12 type=1>
+ <ol style='margin-top:0in' start=4 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>None:
+       default</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Request:
+       guard for a headers object obtained from a request</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Request-no-cors:
+       guard for headers object from a request created with Request.mode
+       no-cors</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Response:
+       guard for a headers object obtained from a response</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Immutable:
+       guard that renders a headers object read-only; mostly used for
+       ServiceWorkers</li>
+  </ol>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=13 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Response
+     Objects</li>
+</ol>
+
+<ol style='margin-top:0in' start=13 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Most common</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=13 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Response.status
+       - contains the response status code</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Response.statusText
+       - A string that corresponds to the HTTP status code</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Response.ok
+       - checking that response range is within 200-299 </li>
+  </ol>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=14 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Body</li>
+</ol>
+
+<ol style='margin-top:0in' start=14 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>An instance
+      of the following.</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=14 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>ArrayBuffer</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>TypedArray</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>DataView</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Blob</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>File</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>String</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>URLSearchParams</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>FormData</li>
+  </ol>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=14 type=1>
+ <ol style='margin-top:0in' start=2 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Request and
+      Response share the following methods</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=14 type=1>
+ <ol style='margin-top:0in' start=2 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Request.arrayBuffer()
+       / Response.arrayBuffer()</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Request.blob()
+       / Response.blob()</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Request.formData()
+       / Request.formData()</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Request.json()
+       / response.json()</li>
+   <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Request.text()
+       / Response.text()</li>
+  </ol>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=15 type=1>
+ <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>Feature
+     detection</li>
+</ol>
+
+<ol style='margin-top:0in' start=15 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='color:#1B1B1B;vertical-align:middle'>API support
+      can be detected by checking for Headers, Request, Response or fetch() on
+      the Window or Worker</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

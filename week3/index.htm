@@ -1,0 +1,357 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'>Larrabee</p>
+
+<p class=MsoNormal align=center style='text-align:center'>Week 3 Notes</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Object Literals</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>A self-contained set of related values and functions</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Incased in {} and a distinguishing feature of Java Script</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Each property is a key-value separated by commas.</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Creating an Object</li>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>const objectname = { item: 'itemname', item: 'itemname',
+      multipleitems: ['item','item','item'], method () { return 'something';}};</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Accessing Properties</li>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>itemname.item</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>itemname['item']</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Computed Properties</li>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>ES6 can concatenate using ['item' + 'item']</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Can return a True or False based on the value of a variable:
+      item: itemname ? false : true</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Symbol data type: const name = Symbol ('name')</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Calling method</li>
+</ol>
+
+<ol style='margin-top:0in' start=7 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>itemname.methodname()</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Checking if Properties or Methods Exist</li>
+</ol>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>'property' in item;</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Finding all properties of an Object</li>
+</ol>
+
+<ol style='margin-top:0in' start=9 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use a &quot;for in&quot; loop</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use the Object.keys() method to find the keys in an object</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use the Object.values() method to find the values of an object</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use the Object.entries() method to return keys and values</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Adding Properties</li>
+</ol>
+
+<ol style='margin-top:0in' start=10 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>value.newproperty = 'item';</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Changing Properties</li>
+</ol>
+
+<ol style='margin-top:0in' start=11 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use item['property'] = 'newvalue';</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Removing Properties</li>
+</ol>
+
+<ol style='margin-top:0in' start=12 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use the delete operator</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>This</li>
+</ol>
+
+<ol style='margin-top:0in' start=13 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Refers to the object is within</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Namespacing</li>
+</ol>
+
+<ol style='margin-top:0in' start=14 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Errors occur when a variable or function share the same name</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>JSON</li>
+</ol>
+
+<ol style='margin-top:0in' start=15 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Lightweight data storage</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>The Math Object</li>
+</ol>
+
+<ol style='margin-top:0in' start=16 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Built-in object used for math operations</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Document Object
+Model</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Getting Elements</li>
+</ol>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>getElementById() method</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>getElementByTagName() method</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>getElementByClassName() method</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>querySelector() method allows to use CSS notation to find the
+      first element in a document that matches</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>querySelectorAll() method finds all the elements that match</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Navigating DOM</li>
+</ol>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use childNodes to list all the children of a certain node</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use firstChild to list first child and lastChild to list last
+      child of the node</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use parentNode to find the parent node of a certain node</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use nextSibling to return the next adjacent node</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use perviousSibling to return the pervious node</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Getting and setting attributes</li>
+</ol>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use getAttribute() method to get attributes</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use setAttribute() method to set attributes</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Creating Dynamic Markup</li>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use createElement() method to create an element on a webpage</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use createTextNode() method to create and put text into a node</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use insertBefore() method to place a new element prior to a
+      specified element</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use insertAfter() method to place a new element following a
+      specified element</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use removeChild() to remove a specified node</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use replaceChild() to replace a specified node</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use innerHTML to place a chunk of HTML inside and element</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Updating CSS</li>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use the style property to change CSS styles in a document</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:27.0pt;line-height:normal'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Event Listeners</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Use inline onclick event handler to point to a function in your
+     JavaScript from HTML</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Use addEventListener() on a node object that is expected to be
+     interacted with by the user</li>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Types of events</li>
+</ol>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Click</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Mousedown</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Mouseup </li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Dbclick</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Mouseover</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Mouseout</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Mousemove</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Keydown</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Keypress</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Keyup</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Touch events</li>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Touchstart</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Touchend</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Touchmove</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Touchenter</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Thouchleave</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Touchcancel</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Using touch length tells you how many touch points are needed to
+      interact with an element</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Removing event listeners</li>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use removeEventListner method</li>
+ </ol>
+</ol>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,298 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Testing and
+Debugging</p>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Errors, Exceptions, and Warnings</li>
+</ol>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>System Error - problem with the system or device</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Programmer Error - the program contains incorrect syntax or
+      faulty logic</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>User Error - User has entered data incorrectly</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Exceptions</li>
+</ol>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>An error that produces a return value that can then be used to
+      deal with the error</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Produces a stack trace. Example index.html:14</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Warnings</li>
+</ol>
+
+<ol style='margin-top:0in' start=3 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Occur if there's an error in the code that isn't enough to cause
+      the program to crash</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Testing and Debugging importance</li>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Strict Mode - introduced with ECMAScript 5, produces more
+      exceptions and warnings and prohibits the use of some features.</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Requires 'use strict' added to the JavaScript file</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Can be used with functions examples (function strictly(){'use
+       strict'; or (function() {'use strict';}());</li>
+  </ol>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Linting Tools</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=2 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>JS Lint</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>JS Hint</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>ES Lint</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Helps when programming as team to enforce style guides.</li>
+  </ol>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Feature Detection</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=3 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Use if statements to ensure that a browser will support the
+       feature you want to use. Example: if (window.holoDeck) { virtualReality,activate();)
+       - this would check to see if holoDeck was supported and if it is no
+       supported the program would skip using it and not fail.</li>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Modernizr - library that can be used to detect features of a
+       browser.</li>
+  </ol>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Debugger in the Browser</li>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=4 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>The Trusty Alert</li>
+  </ol>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=4 type=a>
+  <ol style='margin-top:0in' start=1 type=i>
+   <ol style='margin-top:0in' start=1 type=1>
+    <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+        middle'>Programmed into the application to look for input that meets a
+        required parameter. If not met then  an alert() will be opened and will
+        require the user to click OK.</li>
+   </ol>
+   <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+       middle'>Using the console</li>
+  </ol>
+ </ol>
+</ol>
+
+<ol style='margin-top:0in' start=4 type=1>
+ <ol style='margin-top:0in' start=4 type=a>
+  <ol style='margin-top:0in' start=2 type=i>
+   <ol style='margin-top:0in' start=1 type=1>
+    <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+        middle'>Console.log or console.trace() will not stop and give an option
+        like alret(); however, you will be able to see what the value is or
+        where the error is by looking at the console in the browser.</li>
+   </ol>
+  </ol>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Debugging tools</li>
+</ol>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>See the documentation of the browser to see it's debugging tools.</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use the debugger keyword to create a breakpoint on the code to
+      help with debugging. Be sure to remove before publishing.</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Error Objects</li>
+</ol>
+
+<ol style='margin-top:0in' start=6 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>- const error = new Error('something went wrong');</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>EvalError - only used for backward compatibility</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>RangeError - when a number is outside an acceptable range</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>ReferenceError - when a reference does not exist</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>SyntaxError - when there is an error in the code syntax</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>TypeError - when the type of value used id incorrect</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>URIError - when there is a problem encoding or decoding the URI</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>InternalError - non-standard error when an error occurs in the
+      JavaScript Engine.</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Throwing Exceptions</li>
+</ol>
+
+<ol style='margin-top:0in' start=7 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Use the throw statement. - throw new Error('something has gone
+      wrong');</li>
+ </ol>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Exception Handling</li>
+</ol>
+
+<ol style='margin-top:0in' start=8 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Try, catch, and finally</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>- function imginarySquareRoot(number) {</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>'use strict';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>try {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;line-height:normal'>return String(squareRoot(number));</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>} catch(error) {</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:1.5in;line-height:normal'>return squareRoot(-number)+'i';</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>}</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>}</p>
+
+<ol style='margin-top:0in' start=9 type=1>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Tests</li>
+</ol>
+
+<ol style='margin-top:0in' start=9 type=1>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>Building test functions into code will help with further
+      developing and reduce the number of errors in code</li>
+  <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+      middle'>fucntion itSquareRoots4() {</li>
+ </ol>
+</ol>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:81.0pt;line-height:normal'>return squareRoot(4) ===2;</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;line-height:normal'>}</p>
+
+<ol style='margin-top:0in' start=3 type=a>
+ <li class=MsoNormal style='margin-bottom:0in;line-height:normal;vertical-align:
+     middle'>Jest - TDD framework developed by Facebook to help with common
+     testing.</li>
+</ol>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

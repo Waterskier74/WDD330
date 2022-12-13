@@ -39,7 +39,8 @@ export function renderTeamRoster (players, parent) {
 }
 
 export function renderOnePlayer(player) {
-    const item = document.createElement("li");
+    var item = document.createElement("li");
+    item.classList.add("borderClass");
     item.innerHTML = `<h2>${player.name}</h2>
             <div>
                 <h3>Player Number</h3>
@@ -136,8 +137,8 @@ export function renderBlankPlayer() {
 export function renderPlayerStats(player, listId) {
     document.getElementById(listId).innerHTML = `
     <li>
-        <h2>player Name</h2>
-        <input id="name" value=${player.name}>
+        <h2>${player.name}</h2>
+        <input id="name">
         <div>
             <h3>Player Number</h3>
             <input type=number" id="number" value="${player.number}">

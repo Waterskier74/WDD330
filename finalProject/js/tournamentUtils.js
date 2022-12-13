@@ -58,6 +58,14 @@ export function renderBlankTournament () {
             <h3> Tournament Location </h3>
             <input id="location" value="Enter Tournament Location">
         </div>
+        <div>
+            <h3> Games Won </h3>
+            <input id="gamesWon" type="number" value=0>
+        </div>
+        <div>
+            <h3> Games Lost </h3>
+            <input id="gamesLost" type="number" value=0>
+        </div>
     `
 }
 
@@ -66,6 +74,8 @@ export function editTournamentStats(index) {
     const data = {
         tournamentName: document.getElementById('tournamentName').value,
         location: document.getElementById('location').value,
+        gamesWon: parseInt(document.getElementById('gamesWon').value),
+        gamesLost: parseInt(document.getElementById('gamesLost').value)
     }
     let confirmEdit = confirm("Do you want edit this player?")
     if (confirmEdit) {
@@ -87,6 +97,14 @@ export function renderTournamentStats(tournament, tournamentId) {
             <h3>Tournament Location</h3>
             <input id="location" value="${tournament.location}">
         </div>
+        <div>
+            <h3>Games Won</h3>
+            <input id="gamesWon" type="number" value=${tournament.gamesWon}>
+        </div>
+        <div>
+            <h3>Games Lost</h3>
+            <input id="gamesLost" type="number" value=${tournament.gamesLost}>
+        </div>
     `
 }
 
@@ -94,7 +112,8 @@ export function addTournament() {
     const newData = {
         tournamentName: document.getElementById('tournamentName').value,
         location: document.getElementById('location').value,
-
+        gamesWon: parseInt(document.getElementById('gamesWon').value),
+        gamesLost: parseInt(document.getElementById('gamesLost').value)
     }
     let confirmAdd = confirm("Do you want add this player?")
     if (confirmAdd) {

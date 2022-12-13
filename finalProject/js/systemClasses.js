@@ -6,28 +6,6 @@ import * as tournamentUtils from './tournamentUtils.js';
 let teamRoster = teamUtils.returnTeamRoster();
 let tournamentRoster = tournamentUtils.returnTournamentRoster();
 
-
-//let tournamentData = JSON.parse(localStorage.getItem("tournamentRoster"))
-//if (tournamentData === null) {
-//    tournamentRoster = fetchBlankRoster(requestTournamentURL);
-//}else{
-//    tournamentRoster = tournamentData
-//};
-
-//function fetchBlankRoster (requestURL) {
-//    let blankRoster = []
-//    fetch (requestURL)
-//    .then(res => res.json())
-//    .then (data => {
-//        blankRoster = data
-//    })
-//    .catch(error => {
-//        console.error('Something went wrong.');
-//        console.error(error);
-//    })
-//    return blankRoster;
-//}
-
 function showTeamRoster(playerId) {
     teamRoster = teamUtils.returnTeamRoster();
     const menuItems = document.getElementById(playerId);
