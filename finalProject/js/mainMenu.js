@@ -1,15 +1,17 @@
 import {Players, Tournaments} from './systemClasses.js';
-//import { Tournaments } from './tournamentClass.js';
 
-//import Tournaments from './tournament.js';
+const imgSource = "./images/favicon.ico"
 
 // Render the Main Menu for the application
+
 function showMainMenu () {
     const menuElements = document.getElementById("menu");
     menuElements.innerHTML = "";
 }
 
 export default class MainMenu {
+    
+
     createTeamRosterButton() {
         const teamRosterBtn = document.createElement("button")
         teamRosterBtn.textContent ="Team Roster"
@@ -42,9 +44,7 @@ export default class MainMenu {
     
     showMenu() {
         showMainMenu();
-        menu.appendChild(this.createTeamRosterButton())
-        menu.appendChild(this.createTournamentButton())
-
-
+        menu.appendChild(this.createTeamRosterButton());
+        menu.appendChild(this.createTournamentButton());
     }
 }
