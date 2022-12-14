@@ -2,7 +2,8 @@ import MainMenu from './mainMenu.js';
 import * as teamUtils from './teamUtils.js';
 import * as tournamentUtils from './tournamentUtils.js';
 
-//const requestTournamentURL = 'https://Waterskier74.github.io/wdd330/finalProject/data/tournamentRoster.json';
+//This module contains the main two classes that control the whole application.
+
 let teamRoster = teamUtils.returnTeamRoster();
 let tournamentRoster = tournamentUtils.returnTournamentRoster();
 
@@ -20,12 +21,13 @@ function showTournamentRoster(tournamentId) {
     tournamentUtils.renderTournamentRoster(tournamentRoster, tournamentItems); 
 }
 
-
+// the Players class controls the team roster portion of the application.
 export class Players {
     constructor(playerId) {
         this._playerId = playerId
     }
 
+// return the players array to be used in the application.    
     getAllPlayers() {
         return teamRoster;
     }
@@ -34,6 +36,7 @@ export class Players {
         return this.getAllPlayers().find(player => player.name === playerName);
     }
 
+// this is the back button on used to return the main menu from the team roster
     createBackButton() {
         const backBtn = document.createElement("button");
         backBtn.textContent = "< back to Main Menu";
@@ -48,6 +51,7 @@ export class Players {
         return backBtn;
     }
 
+// This is the close button to close the stats view and return to the team list
     createCloseButton() {
         const closeBtn = document.createElement("button");
         closeBtn.textContent = "Return to Team Roster";
@@ -60,6 +64,7 @@ export class Players {
         return closeBtn;
     }
 
+// This is the edit button to save and edits to a Players stats
     createEditPlayerButton(playerIndex) {
         const editStatsBtn = document.createElement("button");
         editStatsBtn.textContent = "Edit Player";
@@ -72,6 +77,7 @@ export class Players {
         return editStatsBtn;
     }
 
+// This is the add button used to add a new player
     createAddPlayerButton() {
         const addPlayerBtn = document.createElement("button");
         addPlayerBtn.textContent = "Add Player"
@@ -85,6 +91,7 @@ export class Players {
         return addPlayerBtn;
     }
 
+// the save button used when creating a new player
     createSavePlayerButton () {
         const savePlayerBtn = document.createElement("button");
         savePlayerBtn.textContent = "Save Player"
@@ -100,6 +107,7 @@ export class Players {
         return savePlayerBtn;
     }
 
+// The delete button used to delete a player
     createDeletePlayerButton (playerIndex) {
         const deletePlayerBtn = document.createElement("button");
         deletePlayerBtn.textContent = "Delete Player"
@@ -115,6 +123,7 @@ export class Players {
         return deletePlayerBtn;
     }
 
+// This creates the player stats view using functions from the teamUtils module
     showPlayerStats (item) {
         let playerName = item.querySelector('h2').innerText;
         let player = this.getPlayerByName(playerName);
@@ -129,6 +138,7 @@ export class Players {
         }
     }
 
+// creates the team roster view with the use of functions in the teamUtils module
     showTeamRoster() {
         showTeamRoster(this._playerId);
         const menu = document.getElementById("menu");
@@ -145,6 +155,7 @@ export class Players {
         menu.appendChild(this.createBackButton());
     }
 
+// creates the new player view with the use of functions from the team utils module
     showNewPlayer() {
         const menu = document.getElementById("menu");
         teamUtils.renderBlankPlayer();
@@ -153,11 +164,13 @@ export class Players {
     }
 }
 
+// the Tournament class controls the tournament section of the application
 export class Tournaments {
     constructor(tournamentId) {
         this._tournamentId = tournamentId
     }
 
+// creates the tournament array    
     getAllTournaments() {
         return tournamentRoster;
     }
@@ -166,6 +179,7 @@ export class Tournaments {
         return this.getAllTournaments().find(tournament => tournament.tournamentName === tournamentName);
     }
 
+// create a close button
     createCloseButton() {
         const closeBtn = document.createElement("button");
         closeBtn.textContent = "Return to Tournament Roster";

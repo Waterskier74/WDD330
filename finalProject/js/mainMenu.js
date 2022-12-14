@@ -9,9 +9,10 @@ function showMainMenu () {
     menuElements.innerHTML = "";
 }
 
+// Class for the main menu.
 export default class MainMenu {
     
-
+// create the team roster button that call to the teamUtils module to populate the team roster 
     createTeamRosterButton() {
         const teamRosterBtn = document.createElement("button")
         teamRosterBtn.textContent ="Team Roster"
@@ -27,6 +28,7 @@ export default class MainMenu {
         return teamRosterBtn;
     }
 
+// create the tournament button that calls to the tournamentUtils module to populate the tournament roster
     createTournamentButton() {
         const tournamentRosterBtn = document.createElement("button")
         tournamentRosterBtn.textContent = "Tournament Roster"
@@ -41,7 +43,8 @@ export default class MainMenu {
         })
         return tournamentRosterBtn;
     }
-    
+
+// creates the main menu with the two buttons
     showMenu() {
         showMainMenu();
         menu.appendChild(this.createTeamRosterButton());
