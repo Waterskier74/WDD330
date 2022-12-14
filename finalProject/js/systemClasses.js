@@ -192,6 +192,7 @@ export class Tournaments {
         return closeBtn;
     }
 
+// create a back button to return to the tournament list from the stats screen
     createTournamentBackButton() {
        const tournamentBackBtn = document.createElement("button");
         tournamentBackBtn.textContent = "< back to Main Menu";
@@ -206,6 +207,7 @@ export class Tournaments {
         return tournamentBackBtn;
     }
 
+// create an add button to add tournaments to the JSON file
     createAddTournamentButton() {
         const addTournamentBtn = document.createElement("button");
         addTournamentBtn.textContent = "Add Tournament"
@@ -219,6 +221,7 @@ export class Tournaments {
         return addTournamentBtn;
     }
 
+// create a save button to save new tournaments
     createSaveTournamentButton () {
         const saveTournamentBtn = document.createElement("button");
         saveTournamentBtn.textContent = "Save Tournament"
@@ -234,6 +237,7 @@ export class Tournaments {
         return saveTournamentBtn;
     }
 
+// create a delete button to delete tournaments
     createDeleteTournamentButton (tournamentIndex) {
         const deleteTournamentBtn = document.createElement("button");
         deleteTournamentBtn.textContent = "Delete Tournament"
@@ -249,6 +253,7 @@ export class Tournaments {
         return deleteTournamentBtn;
     }
 
+// create an edit button for editing tournament information
     createEditTournamentButton(playerIndex) {
         const editTournamentBtn = document.createElement("button");
         editTournamentBtn.textContent = "Edit Tournament";
